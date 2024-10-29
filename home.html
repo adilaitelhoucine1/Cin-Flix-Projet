@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="css/style.css">   
     <link
     rel="stylesheet"
@@ -52,7 +52,7 @@
                                 
                     </section>
                     <section class="second-section">
-                        <div class="btns"">
+                        <div class="btns">
                             <button class="last"> <img src="images/last.svg"></button>
                             <button class="next"> <img src="images/next.svg"></button>
                         </div>
@@ -153,10 +153,10 @@
                 </div>
                 <div class="content">
                     <div class="selection-bar">             
-                      <a href="#"><p class="selected">Now playing</p></a>
-                       <a href="#"><p>Upcoming</p></a>
-                       <a href="#"><p>Top rated</p></a>
-                       <a href="#"><p>Popular</p></a>
+                      <a onclick="now()"><p class="selected">Now playing</p></a>
+                       <a onclick="upcoming()"><p class="upcoming-btn">Upcoming</p></a>
+                       <a onclick="rated()" class="rated"><p>Top rated</p></a>
+                       <a onclick="Popular()" class="popular"><p>Popular</p></a>
                     </div>  
                 </div>
 
@@ -180,10 +180,11 @@
                 </div>
            </section>
 
-           <footer style="width: 100vw;">
+           <footer>
             <div class="footer-container">
                 <div class="part-1">
-                    
+                    <img src="images/logo-dark.svg" style=" width: 120px;
+    height: 120px;">
                     <a href="">Inscription</a>
                 </div>
                 <!-- ------------------------------------------------ -->
@@ -205,6 +206,6 @@
             </div>
         </footer>
     </div>
-     
+     <script src="/js/script.js"></script>
 </body>
 </html>

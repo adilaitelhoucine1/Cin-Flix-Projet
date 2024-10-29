@@ -35,7 +35,6 @@ body{
 }
 header{
     display: flex;
-    justify-content: space-between;
     align-content: center;
 }
 header .logo{
@@ -49,12 +48,12 @@ header .logo img{
 }
 header nav ul{
     display: flex;
-    margin-right:10px ;
+    margin-right:10px;
     list-style: none;
     color: var(--text-color);
 }
 header nav ul li{
-    margin:50px;    
+    margin:40px;    
 }
 header nav ul li a{
     color: var(--text-color);
@@ -149,16 +148,8 @@ header nav ul li a:hover{
 .films{
     display: flex;
     gap: 10px;
-    animation: film 50s linear infinite;
 }
-@keyframes film{
-    0%{
-        transform: translateX(0%);
-    }
-    100%{
-        transform: translateX(-100%);
-    }
-}
+
 
 form {
     position: relative;
@@ -248,8 +239,7 @@ margin: 10px;
     margin-top: 50px;
 }
 .footer-container {
-   width: 90%;
-   margin: 0 auto;
+   width: 100%;
 } 
 .footer-container .part-1 {
    display: flex;
@@ -279,7 +269,6 @@ margin: 10px;
 footer{
     background-image: url(/images/fotter.png);
     background-repeat: no-repeat;
-    width: 100%;
 }
 .part-1{
     display: flex;
