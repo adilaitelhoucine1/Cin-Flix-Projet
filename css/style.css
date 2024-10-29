@@ -158,7 +158,6 @@ header nav ul li a:hover{
     }
     100%{
         transform: translateX(-100%);
-        overflow-x: visible;
     }
 }
 
@@ -261,8 +260,7 @@ margin: 10px;
 }
 
 .footer-container {
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
 
  }
  
@@ -280,7 +278,9 @@ margin: 10px;
     justify-content: space-between;
  }
 footer{
-    background-image: url(/images/ffoter.png);
+    background-image: url(/images/fotter.png);
+    background-repeat: no-repeat;
+    width: 100%;
 }
 .part-1{
     display: flex;
