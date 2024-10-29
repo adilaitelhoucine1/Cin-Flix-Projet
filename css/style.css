@@ -29,7 +29,6 @@ body{
     overflow-x: hidden;
 }
 .main-container{
-   margin: auto;
     background-repeat: no-repeat;
     width: 90vw;
     height: 100vh;
