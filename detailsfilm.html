@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Film Details</title>
     <link rel="stylesheet" href="css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 </head>
 <body>
    
@@ -14,7 +18,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="">Blog</a></li>
                 <li><a href="">Category</a></li>
                 <li><a  style="display: flex; gap: 10px;">Favorite List <img src="/images/favorite.svg" class="icon-favorite"></a></li>
@@ -43,10 +47,10 @@
                             From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government, undertaking high-risk black ops missions in exchange for commuted prison sentences.
                         </p>
                         <div class="rating">
-                            <h4>5.9/10</h4><img src="images/yellow-star.png">
+                            <h4><span class="rating-count">5.9</span>/10</h4><img src="images/yellow-star.png">
                             <span style="margin: 10px; color: white;">|</span>
                             <img src="images/empty-star.png">
-                            <a href="">Rate</a>
+                            <a onclick="rating()" href="#">Rate</a>
                         </div>
                         <div class="actors">
                             <img src="images/actor.png">
@@ -59,6 +63,31 @@
 
 
         </div>
+        <footer>
+            <div class="footer-container">
+                <div class="part-1">
+                    <img src="images/logo-dark.svg" style=" width: 120px;
+    height: 120px;">
+                    <a href="">Inscription</a>
+                </div>
+                <!-- ------------------------------------------------ -->
+                <div class="part-2">
+                        <div class="sub-nav">
+                            <a href="home.html">Accueil</a>
+                            <a href="about.html">À propos</a>
+                            <a href="product.html">Produits</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.x.com"><i class="fa-solid fa-x"></i></a>
+                            <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                        </div>
+                </div>
+               <!-- ------------------------------------------------- -->
+            </div>
+        </footer>
         <script>
 const fdetails=document.querySelector(".film-details");
 const about=document.querySelector(".about");
@@ -106,7 +135,7 @@ function About(){
                             <h4>5.9/10</h4><img src="images/yellow-star.png">
                             <span style="margin: 10px; color: white;">|</span>
                             <img src="images/empty-star.png">
-                            <a href="">Rate</a>
+                             <a onclick="showrating()" href="">Rate</a>
                         </div>
                         <div class="actors">
                             <img src="images/actor.png">
@@ -117,6 +146,48 @@ function About(){
     about.classList.toggle("selected");
     comentaire.classList.remove("selected");
 }
+
+function rating(){
+   var rating=document.querySelector(".rating");
+   rating.innerHTML=`
+   <div class="rating-box">
+      <header>How was your experience?</header>
+      <div class="stars">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+      <button onclick="updatecomment()">Rate</button>
+    </div>
+   `
+
+ // Select all elements with the "i" tag and store them in a NodeList called "stars"
+ const stars = document.querySelectorAll(".stars i");
+// Loop through the "stars" NodeList
+stars.forEach((star, index1) => {
+  // Add an event listener that runs a function when the "click" event is triggered
+  star.addEventListener("click", () => {
+    // Loop through the "stars" NodeList Again
+    stars.forEach((star, index2) => {
+      // Add the "active" class to the clicked star and any stars with a lower index
+      // and remove the "active" class from any stars with a higher index
+      index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
+    });
+  });
+});
+}
+function updatecomment(){
+    var rating=document.querySelector(".rating");
+   rating.innerHTML=`             
+                            <h4><span class="rating-count">5.9</span>/10</h4><img src="images/yellow-star.png">
+                            <span style="margin: 10px; color: white;">|</span>
+                            <img src="images/empty-star.png">
+                            <a onclick="rating()" href="#">Rate</a>                     
+   `
+};
+
         </script>
 </body>
 </html>
