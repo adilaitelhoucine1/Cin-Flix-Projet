@@ -33,31 +33,90 @@
 
             <div class="dt-content">
                 <div class="dt-selection-bar">             
-                        <a class="selected"><p>About Movie</p></a>
-                        <a class="upcoming-btn"><p>Comment</p></a>
-                        <a class="rated"><p>Trailer</p></a>   
+                        <a onclick="About()" class="selected about"><p>About Movie</p></a>
+                        <a onclick="filmcomment()" class="upcoming-btn"><p>Comment</p></a>
+                        <a href="https://www.youtube.com/watch?v=8WReKD4aMtc" class="rated"><p>Trailer</p></a>   
               </div>
 
                <div class="film-details">
-                <p class="dt-description">
-                    From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government, undertaking high-risk black ops missions in exchange for commuted prison sentences.
-                </p>
-                 <div class="rating">
-                    <h4>5.9/10</h4><img src="images/yellow-star.png">
-                    <span style="margin: 10px; color: white;">|</span>
-                    <img src="images/empty-star.png">
-                    <a href="">Rate</a>
-                 </div>
-                 <div class="actors">
-                    <img src="images/actor.png">
-                    <img src="images/actor.png">
-                    <img src="images/actor.png">
-                 </div>
+                        <p class="dt-description">
+                            From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government, undertaking high-risk black ops missions in exchange for commuted prison sentences.
+                        </p>
+                        <div class="rating">
+                            <h4>5.9/10</h4><img src="images/yellow-star.png">
+                            <span style="margin: 10px; color: white;">|</span>
+                            <img src="images/empty-star.png">
+                            <a href="">Rate</a>
+                        </div>
+                        <div class="actors">
+                            <img src="images/actor.png">
+                            <img src="images/actor.png">
+                            <img src="images/actor.png">
+                        </div>
                </div>
           </div>
             </div>
 
 
         </div>
+        <script>
+const fdetails=document.querySelector(".film-details");
+const about=document.querySelector(".about");
+const comentaire =document.querySelector(".upcoming-btn");
+function filmcomment(){
+    fdetails.innerHTML=`
+    <div class="comments">
+                    <!-- comment 1 -->
+                     <div class="commentaire">
+                            <div class="personal-info">
+                                    <img src="images/actor.png">
+                                    <h5>Adil Ait Elhoucine</h5>
+                                    <img class="stars" src="images/rating-starts.png">
+                            </div>
+                            <div class="comment-body">
+                                <p class="comment-description">I like really like this  film, i advise you to watch it  </p>
+                            </div>
+                     </div>
+                     <!-- comment 2 -->
+                     <div class="commentaire">
+                        <div class="personal-info">
+                                <img src="images/actor.png">
+                                <h5>Adil Ait Elhoucine</h5>
+                                <img class="stars" src="images/rating-starts.png">
+                        </div>
+                        <div class="comment-body">
+                            <p class="comment-description">I like really like this  film, i advise you to watch it  </p>
+                        </div>
+                     </div>
+                     <div class="add-comment">
+                        <img src="images/add-cooment.png">
+                     </div>
+                 </div>
+    `
+    comentaire.classList.toggle("selected");
+    about.classList.remove("selected");
+}
+
+function About(){
+    fdetails.innerHTML=`
+                         <p class="dt-description">
+                            From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government, undertaking high-risk black ops missions in exchange for commuted prison sentences.
+                        </p>
+                        <div class="rating">
+                            <h4>5.9/10</h4><img src="images/yellow-star.png">
+                            <span style="margin: 10px; color: white;">|</span>
+                            <img src="images/empty-star.png">
+                            <a href="">Rate</a>
+                        </div>
+                        <div class="actors">
+                            <img src="images/actor.png">
+                            <img src="images/actor.png">
+                            <img src="images/actor.png">
+                        </div>
+    `
+    about.classList.toggle("selected");
+    comentaire.classList.remove("selected");
+}
+        </script>
 </body>
 </html>

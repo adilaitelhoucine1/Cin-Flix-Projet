@@ -377,6 +377,7 @@ footer:hover{
 }
 .dt-content{
     width: 40%;
+    position: relative;
 }
 .dt-content .dt-selection-bar a{
     color: var(--text-color);
@@ -415,4 +416,38 @@ footer:hover{
 }
 .actors img{
     width: 400px;
+}
+.commentaire{
+    width: 500px;
+    height: 200px;
+    background-color: var(--color-light);
+    border-radius: 20px;
+    margin: 10px;
+   
+}
+.commentaire .personal-info{
+    display: flex;
+    align-items: center;
+}
+.commentaire .personal-info img{
+    width: 100px;
+    height: 100px;
+    margin: 10px 40px;
+}
+.commentaire .personal-info h5{
+    font-size: 0.9rem;
+}
+.commentaire .personal-info .stars {
+    width: 100px;
+    height: 30px;
+}
+.comment-description{
+    margin:10px 40px;
+}
+.add-comment{
+    width: 60px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    right: 40px;
 }

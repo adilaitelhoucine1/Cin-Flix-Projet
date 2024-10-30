@@ -176,3 +176,4 @@ film_cards.forEach((element) =>
 function redirect(){
     window.location.href = "detailsfilm.html";
 }
+
