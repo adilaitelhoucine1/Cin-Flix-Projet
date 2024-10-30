@@ -1,17 +1,26 @@
 const element = document.querySelector('.films');
-console.log(element);
 
-// Create the keyframes and timing options
 element.animate(
   [
-    { transform: 'translateX(0%)' }, 
-    { transform: 'translateX(-100%)' } 
+    { 
+        transform: 'translateX(0%)' 
+    }, 
+    { 
+        transform: 'translateX(-50%)' 
+    } 
   ],
+
   {
-    duration: 50000,     
+    duration: 50000, 
     iterations: Infinity,
   }
+  
 );
+
+
+
+// animation  script end
+
 const films=document.querySelector(".all-films");
 var upcomingbtn=document.querySelector(".upcoming-btn");
 var rated=document.querySelector(".rated");
@@ -38,6 +47,10 @@ function nowfilm(){
                     <img src="/images/film-4.png">
                 </div>
     `
+    upcomingbtn.classList.remove("selected");
+    rated.classList.remove("selected");
+    popular.classList.remove("selected");
+    now.classList.toggle("selected");
 }
 
 function upcoming(){
@@ -71,9 +84,9 @@ function upcoming(){
                     <img src="/images/film-4.png">
                 </div>
     `
-    now.classList.remove();
-    rated.classList.remove();
-    popular.classList.remove();
+    now.classList.remove("selected");
+    rated.classList.remove("selected");
+    popular.classList.remove("selected");
     upcomingbtn.classList.toggle("selected");
 }
 
@@ -100,6 +113,9 @@ function ratedfilm(){
                 </div>
             
     `
+    upcomingbtn.classList.remove("selected");
+    now.classList.remove("selected");
+    popular.classList.remove("selected");
     rated.classList.toggle("selected");
 }
 
@@ -128,5 +144,35 @@ function Popular(){
                     <img src="/images/film-4.png">
                 </div>
     `
+    upcomingbtn.classList.remove("selected");
+    rated.classList.remove("selected");
+    now.classList.remove("selected");
     popular.classList.toggle("selected");
+}
+
+//filter live
+document.querySelector("#search").addEventListener("input" , filtercards);
+
+function filtercards(){
+    const searchInput = document.querySelector("#search");
+    const value = searchInput.value.toLowerCase();
+    const cards =  document.querySelectorAll(".more") ;
+    cards.forEach((card)=>{
+        let text = card.textContent.toLowerCase();
+        if(text.includes(value)){
+            card.style.display = "";
+        }else{
+            card.style.display = "none";
+        }
+    })
+}
+//filter  live ends
+
+//a chaque clique redirect to page details
+let film_cards=document.querySelectorAll(".film-image");
+
+film_cards.forEach((element) => 
+    element.addEventListener("click",redirect));
+function redirect(){
+    window.location.href = "detailsfilm.html";
 }
