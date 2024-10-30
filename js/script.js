@@ -17,9 +17,9 @@ var upcomingbtn=document.querySelector(".upcoming-btn");
 var rated=document.querySelector(".rated");
 var popular=document.querySelector(".popular");
 var now=document.querySelector(".selected");
+//upcoming.addEventListener("click",upcoming);
 
-function now(){
-    console.log("adil el mejor");
+function nowfilm(){
     films.innerHTML=`
                   <!-- film-1 -->
                 <div class="film-image">
@@ -77,7 +77,7 @@ function upcoming(){
     upcomingbtn.classList.toggle("selected");
 }
 
-function rated(){
+function ratedfilm(){
     films.innerHTML=`
                    <!-- film-1 -->
                 <div class="film-image">

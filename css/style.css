@@ -28,6 +28,9 @@ body{
     background-image:url(/images/background.png);
     overflow-x: hidden;
 }
+a:hover{
+    cursor: pointer;
+}
 .main-container{
     background-repeat: no-repeat;
     width: 90vw;
@@ -239,7 +242,7 @@ margin: 10px;
     margin-top: 50px;
 }
 .footer-container {
-   width: 100%;
+   width: 100vw;
 } 
 .footer-container .part-1 {
    display: flex;
@@ -267,8 +270,15 @@ margin: 10px;
     justify-content: space-between;
  }
 footer{
-    background-image: url(/images/fotter.png);
+    /* background-image: url(/images/fotter.png); */
     background-repeat: no-repeat;
+    width: 100vw;
+    background: linear-gradient(30deg, rgb(6, 6, 6), rgb(254, 254, 254));
+    border-radius: 50px;
+    transition: 1s;
+}
+footer:hover{
+    border-radius:0;
 }
 .part-1{
     display: flex;
