@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite</title>*
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-image: url(/images/favorite-bg.jpg);">
+    <header style="display: flex;justify-content: space-between;">
+        <div class="logo">
+            <img src="images/logo-dark.svg">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Category</a></li>
+                <li><a href="fav" style="display: flex; gap: 10px;">Favorite List <img src="/images/favorite.svg" class="icon-favorite"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="favorite-header">
+        <h4>Favourite List</h4>
+        <h5 class="deletemessage" style="color: red;">Film Removed From List</h5>
+    </div>
+    <div class="favoutite-container">
+ 
+    </div>
+</body>
+<script>
+    var test=localStorage.getItem('favoriteimage');
+    var fv=document.querySelector(".favoutite-container");   
+    var deletemessage=document.querySelector(".deletemessage");   
+    if(test.length == 0){
+        fv.innerHTML=``;
+        
+    }else{
+        fv.innerHTML=
+        `
+            <div class="fv-image-container">
+            <img src=${test}>
+            <h4>Spider-Man</h4> 
+            <button onclick="removefavorite()"><img src="images/corbielle-dark.png"></button>
+           </div>
+        `
+        deletemessage.style.display="none";
+    }
+    function removefavorite(){
+        localStorage.removeItem("favoriteimage");
+        fv.innerHTML=``;
+        setTimeout(() => {
+            deletemessage.style.display="";
+}, 1000);
+        
+    }
+</script>
+</html>

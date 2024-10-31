@@ -120,5 +120,11 @@ function AddComment(){
     `
     newcoment.value="";
 
-
 }
+let favoriteicon=document.querySelector(".favorite-icon");
+let maindtimage=document.querySelector(".main-dt-image").src;
+
+favoriteicon.addEventListener("click",()=>{
+  localStorage.setItem('favoriteimage','images/film-details.png');
+    window.alert("is Added ");
+})
