@@ -355,12 +355,13 @@ footer:hover{
     transform: scale(1.2); 
  }
  /*******End footer style*******/
- /***********deatils film stzrt here*******/
+ /***********deatils film start here*******/
 .film-deatils-container{
     display: flex;
+    flex-wrap: wrap;
     width: 80vw;
     margin: auto;
-    height: 100vh;
+
 }
 .film-deatils-container .image-container{
     width: 50%;
@@ -383,7 +384,7 @@ footer:hover{
     width: 80px;
 }
 .dt-content{
-    width: 40%;
+    width: 50%;
     position: relative;
 }
 .dt-content .dt-selection-bar a{
@@ -429,7 +430,7 @@ footer:hover{
     height: 200px;
     background-color: var(--color-light);
     border-radius: 20px;
-    margin: 10px;
+    margin: 20px;
    
 }
 .commentaire .personal-info{
@@ -502,4 +503,75 @@ footer:hover{
     height: 50px;
     border-radius: 50%;
   }
-  
+  /*Ad comment form*/
+ .comment-form{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: 20px;
+  border-radius: 15px;
+ } 
+ .comment-form h4{
+    color: var(--color-brand);
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 2px;
+ } 
+ .comment-form form{
+ background-color: transparent;
+ } 
+ .comment-form form textarea{
+ border-radius: 15px;
+ background-color: transparent;
+ color: var(--color-light);
+
+ } 
+ .comment-form form textarea::placeholder{
+color: var(--color-light);
+padding: 10px;
+ } 
+ /**/
+ .card {
+    max-width: 20rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+   
+  .star {
+    font-size: 5vh;
+    cursor: pointer;
+  }
+   
+  .one {
+    color: rgb(255, 0, 0);
+  }
+   
+  .two {
+    color: rgb(255, 106, 0);
+  }
+   
+  .three {
+    color: rgb(251, 255, 120);
+  }
+   
+  .four {
+    color: rgb(255, 255, 0);
+  }
+   
+  .five {
+    color: rgb(24, 159, 14);
+  }
+  .addcoment{
+    width: 100px;
+    height: 40px;
+    background-color: var(--color-brand);
+    border-radius: 15px;
+    margin: 15px 0px;
+  }
+  textarea{
+    padding: 10px;
+    border-radius: 15px;
+  }
+ 

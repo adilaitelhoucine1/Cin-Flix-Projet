@@ -11,7 +11,7 @@ element.animate(
   ],
 
   {
-    duration: 50000, 
+    duration: 30000, 
     iterations: Infinity,
   }
   
@@ -51,6 +51,7 @@ function nowfilm(){
     rated.classList.remove("selected");
     popular.classList.remove("selected");
     now.classList.toggle("selected");
+    document.querySelector("#search").addEventListener("input" , filtercards);
 }
 
 function upcoming(){
@@ -88,6 +89,7 @@ function upcoming(){
     rated.classList.remove("selected");
     popular.classList.remove("selected");
     upcomingbtn.classList.toggle("selected");
+    document.querySelector("#search").addEventListener("input" , filtercards);
 }
 
 function ratedfilm(){
@@ -117,6 +119,7 @@ function ratedfilm(){
     now.classList.remove("selected");
     popular.classList.remove("selected");
     rated.classList.toggle("selected");
+    document.querySelector("#search").addEventListener("input" , filtercards);
 }
 
 function Popular(){
@@ -148,6 +151,7 @@ function Popular(){
     rated.classList.remove("selected");
     now.classList.remove("selected");
     popular.classList.toggle("selected");
+    document.querySelector("#search").addEventListener("input" , filtercards);
 }
 
 //filter live

@@ -9,9 +9,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    
 </head>
 <body>
-   
     <header style="display: flex;justify-content: space-between;">
         <div class="logo">
             <img src="images/logo-dark.svg">
@@ -33,9 +33,14 @@
                     </div>     
                     <img class="main-dt-image" src="images/film-details.png">
                     <img class="favorite-icon" src="images/add-favorite.png">
-                <div class="comment-form" style="width: 500px;height: 500px; background-color: red;">
 
+                <div class="comment-form">
+                    <h4>Add Your Comment</h4>          
+                    <textarea name=""  rows="4" cols="70" placeholder="Add Your Comment"></textarea>
+                    <button class="addcoment" onclick="AddComment()">Add</button>
+             
                 </div>
+                
             </div>
 
             <div class="dt-content">
@@ -56,15 +61,14 @@
                             <a onclick="rating()" href="#">Rate</a>
                         </div>
                         <div class="actors">
-                            <img src="images/actor.png">
-                            <img src="images/actor.png">
-                            <img src="images/actor.png">
+                            <img src="images/actor1.png">
+                            <img src="images/actor2.png">
+                            <img src="images/actor3.png">
                         </div>
                </div>
+               
           </div>
             </div>
-
-
         </div>
         <footer>
             <div class="footer-container">
@@ -91,127 +95,6 @@
                <!-- ------------------------------------------------- -->
             </div>
         </footer>
-        <script>
-const fdetails=document.querySelector(".film-details");
-const about=document.querySelector(".about");
-const comentaire =document.querySelector(".upcoming-btn");
-function filmcomment(){
-    fdetails.innerHTML=`
-    <div class="comments">
-                    <!-- comment 1 -->
-                     <div class="commentaire">
-                            <div class="personal-info">
-                                    <img src="images/actor.png">
-                                    <h5>Adil Ait Elhoucine</h5>
-                                    <img class="stars" src="images/rating-starts.png">
-                            </div>
-                            <div class="comment-body">
-                                <p class="comment-description">I like really like this  film, i advise you to watch it  </p>
-                            </div>
-                     </div>
-                     <!-- comment 2 -->
-                     <div class="commentaire">
-                        <div class="personal-info">
-                                <img src="images/actor.png">
-                                <h5>Adil Ait Elhoucine</h5>
-                                <img class="stars" src="images/rating-starts.png">
-                        </div>
-                        <div class="comment-body">
-                            <p class="comment-description">I like really like this  film, i advise you to watch it  </p>
-                        </div>
-                     </div>
-                     <div class="add-comment">
-                        <img src="images/add-cooment.png">
-                     </div>
-                 </div>
-    `
-    comentaire.classList.toggle("selected");
-    about.classList.remove("selected");
-}
-
-function About(){
-    fdetails.innerHTML=`
-                         <p class="dt-description">
-                            From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government, undertaking high-risk black ops missions in exchange for commuted prison sentences.
-                        </p>
-                        <div class="rating">
-                            <h4>5.9/10</h4><img src="images/yellow-star.png">
-                            <span style="margin: 10px; color: white;">|</span>
-                            <img src="images/empty-star.png">
-                             <a onclick="showrating()" href="">Rate</a>
-                        </div>
-                        <div class="actors">
-                            <img src="images/actor.png">
-                            <img src="images/actor.png">
-                            <img src="images/actor.png">
-                        </div>
-    `
-    about.classList.toggle("selected");
-    comentaire.classList.remove("selected");
-}
-
-function rating(){
-   var rating=document.querySelector(".rating");
-   rating.innerHTML=`
-   <div class="rating-box">
-      <header>How was your experience?</header>
-      <div class="stars">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-      </div>
-      <button onclick="updatecomment()">Rate</button>
-    </div>
-   `
-
- // Select all elements with the "i" tag and store them in a NodeList called "stars"
- const stars = document.querySelectorAll(".stars i");
-// Loop through the "stars" NodeList
-stars.forEach((star, index1) => {
-  // Add an event listener that runs a function when the "click" event is triggered
-  star.addEventListener("click", () => {
-    // Loop through the "stars" NodeList Again
-    stars.forEach((star, index2) => {
-      // Add the "active" class to the clicked star and any stars with a lower index
-      // and remove the "active" class from any stars with a higher index
-      index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
-    });
-  });
-});
-}
-function updatecomment(){
-    var rating=document.querySelector(".rating");
-   rating.innerHTML=`             
-                            <h4><span class="rating-count">5.9</span>/10</h4><img src="images/yellow-star.png">
-                            <span style="margin: 10px; color: white;">|</span>
-                            <img src="images/empty-star.png">
-                            <a onclick="rating()" href="#">Rate</a>                     
-   `
-};
-
- var likescount=document.querySelector(".likes-count");
- var likeicon=document.querySelector(".likeimg");
-
-const original='images/like-icon.png';
-const full='images/like-icon-full.png';
-
-//Update like
-likeicon.addEventListener("click",function(){
-    var  likeinteger =parseInt(likescount.textContent);
-   console.log(likeinteger);
-    if(likeicon.src.endsWith("icon.png")){
-        likeinteger++;
-        likeicon.src=full;
-    }else{
-        likeinteger--;
-        likeicon.src=original;
-    }
-    likescount.textContent=likeinteger;
-})
- 
-
-</script>
+ <script src="js/detailsscript.js"></script>
 </body>
 </html>
