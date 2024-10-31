@@ -28,11 +28,14 @@
         <div class="film-deatils-container">
             <div class="image-container">
                     <div class="likes">
-                        <img src="images/like-icon.png">
-                        <h4 class="likes-count" style="color: white;">144</h4>
+                        <img class="likeimg" src="images/like-icon.png">
+                        <h4  class="likes-count" style="color: white;">144</h4>
                     </div>     
                     <img class="main-dt-image" src="images/film-details.png">
                     <img class="favorite-icon" src="images/add-favorite.png">
+                <div class="comment-form" style="width: 500px;height: 500px; background-color: red;">
+
+                </div>
             </div>
 
             <div class="dt-content">
@@ -188,6 +191,27 @@ function updatecomment(){
    `
 };
 
-        </script>
+ var likescount=document.querySelector(".likes-count");
+ var likeicon=document.querySelector(".likeimg");
+
+const original='images/like-icon.png';
+const full='images/like-icon-full.png';
+
+//Update like
+likeicon.addEventListener("click",function(){
+    var  likeinteger =parseInt(likescount.textContent);
+   console.log(likeinteger);
+    if(likeicon.src.endsWith("icon.png")){
+        likeinteger++;
+        likeicon.src=full;
+    }else{
+        likeinteger--;
+        likeicon.src=original;
+    }
+    likescount.textContent=likeinteger;
+})
+ 
+
+</script>
 </body>
 </html>
