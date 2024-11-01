@@ -23,6 +23,12 @@
     font-family: "Poppins", sans-serif;
     text-decoration: none;
 }
+.light-mode {
+    --text-color: #000;
+    --color-dark: #fff;
+    --color-light: #2f2f2f;
+}
+
 body{
     background-image:url(/images/background.png);
     
@@ -106,7 +112,7 @@ header nav ul li a:hover{
 .first-section .content .btns .Watch-trailer{
     background-color: transparent;
     color: var(--text-color);
-    border: 1px solid #fff;
+    border: 1px solid #000000;
 }
 .first-section .content .btns .Watch-trailer:hover{
   background-color: var(--hover-btn-color);
@@ -116,7 +122,7 @@ header nav ul li a:hover{
 .first-section .content .btns .Watch-now{
     background-color: var(--title-color);
     color: var(--black-text-color);
-    border: 1px solid #fff;
+    border: 1px solid #000000;
 }
 .first-section .content .btns .Watch-now:hover{
   background-color: var(--hover-btn-color);
@@ -620,4 +626,41 @@ padding: 10px;
 .fv-image-container button img{
     width: 100%;
     height: 100%;
+}
+/* Style général pour le bouton */
+#theme-toggle {
+    height:40px;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: 10px;
+    top :15px;
+}
+
+/* Icône de bascule, si vous en utilisez une */
+#theme-toggle .icon {
+    font-size: 1.2rem;
+    
+}
+
+/* Effet de survol (hover) */
+#theme-toggle:hover {
+    background-color: var(--color-brand); /* Couleur de survol */
+    color: var(--color-dark); /* Couleur du texte inversée */
+}
+
+/* Style pour le mode clair (lorsque le mode clair est activé) */
+.light-mode #theme-toggle {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+  
 }

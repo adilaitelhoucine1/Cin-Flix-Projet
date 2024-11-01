@@ -14,6 +14,7 @@ function filmcomment(){
 }
 
 function About(){
+
     commentform.innerHTML="";
     fdetails.innerHTML=`
                          <p class="dt-description">
@@ -26,9 +27,9 @@ function About(){
                              <a onclick="showrating()" href="">Rate</a>
                         </div>
                         <div class="actors">
-                            <img src="images/actor.png">
-                            <img src="images/actor.png">
-                            <img src="images/actor.png">
+                            <img src="images/actor1.png">
+                            <img src="images/actor2.png">
+                            <img src="images/actor3.png">
                         </div>
     `
     about.classList.toggle("selected");

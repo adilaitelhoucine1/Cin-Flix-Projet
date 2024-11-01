@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Favorite</title>*
+    <title>Favorite</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body style="background-image: url(/images/favorite-bg.jpg);">
-    <header style="display: flex;justify-content: space-between;">
+    <header>
         <div class="logo">
             <img src="images/logo-dark.svg">
         </div>
@@ -16,13 +16,16 @@
                 <li><a href="home.html">Home</a></li>
                 <li><a href="">Blog</a></li>
                 <li><a href="">Category</a></li>
-                <li><a href="fav" style="display: flex; gap: 10px;">Favorite List <img src="/images/favorite.svg" class="icon-favorite"></a></li>
+                <li><a href="#" style="display: flex; gap: 10px;">Favorite List <img src="/images/favorite.svg" class="icon-favorite"></a></li>
+                <button id="theme-toggle">
+                    <i class="icon fas fa-moon"></i> Dark Mode
+                </button>
             </ul>
         </nav>
     </header>
     <div class="favorite-header">
         <h4>Favourite List</h4>
-        <h5 class="deletemessage" style="color: red;">Film Removed From List</h5>
+        <h5 class="deletemessage" style="color: red; display: none;">Film Removed From List</h5>
     </div>
     <div class="favoutite-container">
  
@@ -32,9 +35,11 @@
     var test=localStorage.getItem('favoriteimage');
     var fv=document.querySelector(".favoutite-container");   
     var deletemessage=document.querySelector(".deletemessage");   
-    if(test.length == 0){
+    console.log(deletemessage);
+
+    
+    if(test.length === 0){
         fv.innerHTML=``;
-        
     }else{
         fv.innerHTML=
         `
@@ -55,4 +60,5 @@
         
     }
 </script>
+<script src="js/dark-deatils-fav.js"></script>
 </html>
