@@ -105,7 +105,7 @@ let commentbody=document.querySelector(".comment-description");
 function AddComment(){
     
   filmcomment(); // pour  avoir coment side in ghe screen
-  fdetails.innerHTML=`
+  const test =`
     <div class="comments">
                     <div class="commentaire">
                             <div class="personal-info">
@@ -119,6 +119,7 @@ function AddComment(){
                     </div>
     </div>
     `
+    fdetails.innerHTML += test;
     newcoment.value="";
 
 }
