@@ -130,3 +130,22 @@ favoriteicon.addEventListener("click",()=>{
   localStorage.setItem('favoriteimage','images/film-details.png');
     window.alert("is Added ");
 })
+// scroll films 
+var films= document.querySelector(".films");
+var next=document.querySelector(".next");
+var last=document.querySelector(".last");
+next.addEventListener("click", () => {
+  films.scrollBy({
+    top: 0, 
+    left: 175,
+    behavior: "smooth" 
+  });
+});
+last.addEventListener("click", () => {
+  films.scrollBy({
+    top: 0, 
+    left: -175,
+    behavior: "smooth" 
+  });
+});
+

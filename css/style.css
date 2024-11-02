@@ -26,7 +26,7 @@
 .light-mode {
     --text-color: #000;
     --color-dark: #fff;
-    --color-light: #2f2f2f;
+    --color-light: #000000;
 }
 
 body{
@@ -87,6 +87,11 @@ header nav ul li a:hover{
     width: 40%;
     margin-left: 80px;
 }
+.film-image h1{
+    text-align: center;
+    color: #fff;
+}
+
 .first-section .content .title span{
    color: var(--title-color);
     font-weight: 600;
@@ -265,7 +270,7 @@ form {
     margin-top: 50px;
 }
 .footer-container {
-   width: 100vw;
+   width: 100%;
 } 
 .footer-container .part-1 {
    display: flex;
@@ -296,7 +301,7 @@ footer{
     /* background-image: url(/images/fotter.png); */
     background-repeat: no-repeat;
     width: 100vw;
-    background: linear-gradient(30deg, rgb(6, 6, 6), rgb(186, 176, 176));
+    background: linear-gradient(30deg, var(--color-dark),var(--color-light));
     border-radius: 50px;
     transition: 1s;
 }
@@ -587,7 +592,7 @@ padding: 10px;
     height: 80vh;
     width: 60vw;
     margin: auto;
-    border-radius: 15px;
+    border-radius: 15px;    
 }
 .favorite-header{
     display: flex;
@@ -628,7 +633,7 @@ padding: 10px;
     width: 100%;
     height: 100%;
 }
-/* Style général pour le bouton */
+
 #theme-toggle {
     height:40px;
     background-color: var(--color-dark);
@@ -647,7 +652,7 @@ padding: 10px;
     top :15px;
 }
 
-/* Icône de bascule, si vous en utilisez une */
+
 #theme-toggle .icon {
     font-size: 1.2rem;
     
@@ -655,11 +660,11 @@ padding: 10px;
 
 /* Effet de survol (hover) */
 #theme-toggle:hover {
-    background-color: var(--color-brand); /* Couleur de survol */
-    color: var(--color-dark); /* Couleur du texte inversée */
+    background-color: var(--title-color);
+    color: var(--color-dark);
 }
 
-/* Style pour le mode clair (lorsque le mode clair est activé) */
+
 .light-mode #theme-toggle {
     background-color: var(--color-light);
     color: var(--color-dark);
