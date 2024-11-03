@@ -196,3 +196,13 @@ function redirect(){
     window.location.href = "detailsfilm.html";
 }
 
+const burgerMenu = document.querySelector('.burger-menu');
+const navLinks = document.querySelector('.nav-links');
+
+burgerMenu.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+// document.querySelector(".burger-menu").addEventListener("click",shownavbar);
+// function shownavbar(){
+//    document.querySelector(".show").innerHTML.style.display='block'
+// }
