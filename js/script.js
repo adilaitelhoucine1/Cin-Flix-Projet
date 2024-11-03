@@ -32,22 +32,22 @@ function nowfilm(){
     films.innerHTML=`
                   <!-- film-1 -->
                 <div class="film-image more">
-                    <img src="/images/film-1.svg">
+                    <img src="images/film-1.svg">
                     <h1 style="margin: auto;">shang shi</h1>
                 </div>
                  <!-- film-2 -->
                  <div class="film-image more">
-                    <img src="/images/film-2.png">
+                    <img src="images/film-2.png">
                     <h1 style="margin: auto;">film 1</h1>
                 </div>
                  <!-- film-3 -->
                  <div class="film-image more">
-                    <img src="/images/film-3.png">
+                    <img src="images/film-3.png">
                     <h1 style="margin: auto;">film 2</h1>
                 </div>
                  <!-- film-4 -->
                  <div class="film-image more">
-                    <img src="/images/film-4.png">
+                    <img src="images/film-4.png">
                     <h1 style="margin: auto;">film 3</h1>
                 </div>
     `
@@ -62,30 +62,30 @@ function upcoming(){
     films.innerHTML=`
                    <!-- film-1 -->
                 <div class="film-image more">
-                    <img src="/images/alien-1.png">
+                    <img src="images/alien-1.png">
                     <h1 style="margin: auto;">film 4</h1>
                 </div>
                  <!-- film-2 -->
                  <div class="film-image more">
-                    <img src="/images/film-2.png">
+                    <img src="images/film-2.png">
                     <h1 style="margin: auto;">film 5</h1>
                 </div>
                  <!-- film-3 -->
                  <div class="film-image more">
-                    <img src="/images/film-3.png">
+                    <img src="images/film-3.png">
                     <h1 style="margin: auto;">film 6</h1>
                 </div>
                  <!-- film-4 -->
                  <div class="film-image more">
-                    <img src="/images/film-4.png">
+                    <img src="images/film-4.png">
                     <h1 style="margin: auto;">film 7</h1>
                 </div>
                  <div class="film-image more">
-                    <img src="/images/film-4.png">
+                    <img src="images/film-4.png">
                     <h1 style="margin: auto;">film 8</h1>
                 </div>
                  <div class="film-image more">
-                    <img src="/images/film-4.png">
+                    <img src="images/film-4.png">
                     <h1 style="margin: auto;">film 9</h1>
                 </div>
     `
@@ -100,26 +100,26 @@ function ratedfilm(){
     films.innerHTML=`
                    <!-- film-1 -->
                 <div class="film-image more">
-                    <img src="/images/alien-1.png">
+                    <img src="images/alien-1.png">
                     <h1 style="margin: auto;">film 1</h1>
                 </div>
                  <!-- film-2 -->
                  <div class="film-image more">
-                    <img src="/images/film-2.png">
+                    <img src="images/film-2.png">
                     <h1 style="margin: auto;">film 2</h1>
                 </div>
                  <!-- film-3 -->
                  <div class="film-image more">
-                    <img src="/images/film-3.png">
+                    <img src="images/film-3.png">
                     <h1 style="margin: auto;">film 3</h1>
                 </div>
                  <!-- film-4 -->
                  <div class="film-image more">
-                    <img src="/images/film-4.png">
+                    <img src="images/film-4.png">
                     <h1 style="margin: auto;">film 4</h1>
                 </div>
                  <div class="film-image more">
-                    <img src="/images/film-4.png">
+                    <img src="images/film-4.png">
                     <h1 style="margin: auto;">film 5</h1>
                 </div>
             
@@ -135,30 +135,30 @@ function Popular(){
     films.innerHTML=`
                   <!-- film-1 -->
                 <div class="film-image more">
-                    <img src="/images/film-1.svg">
+                    <img src="images/film-1.svg">
                     <h1 style="margin: auto;">film 1</h1>
                 </div>
                  <!-- film-2 -->
                  <div class="film-image more">
-                    <img src="/images/film-2.png">
+                    <img src="images/film-2.png">
                     <h1 style="margin: auto;">film 2</h1>
                 </div>
                  <!-- film-3 -->
                  <div class="film-image more">
-                    <img src="/images/film-3.png">
+                    <img src="images/film-3.png">
                     <h1 style="margin: auto;">film 3</h1>
                 </div>
                  <!-- film-4 -->
                  <div class="film-image more">
-                    <img src="/images/film-4.png">
+                    <img src="images/film-4.png">
                     <h1 style="margin: auto;">film 4</h1>
                 </div>
                 <div class="film-image more">
-                    <img src="/images/film-4.png">
+                    <img src="images/film-4.png">
                     <h1 style="margin: auto;">film 5</h1>
                 </div>
                 <div class="film-image more">
-                    <img src="/images/film-4.png">
+                    <img src="images/film-4.png">
                     <h1 style="margin: auto;">film 6</h1>
                 </div>
     `
